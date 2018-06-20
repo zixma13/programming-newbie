@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Get elements by Tag name</title>
+</head>
+<body>
+    <input type="button" id="paint-btn" value="Paint DIV" />
+    <input type="button" id="reset-btn" value="Reset" />
+    <div style="">This is BLACK</div>
+    <div style="">This is RED</div>
+    
+    <script type="text/javascript">
+        var paintBtn = document.getElementById("paint-btn");
+        paintBtn.onclick = function(){
+            var div1 = document.getElementsByTagName("div")[0];
+            var div2 = document.getElementsByTagName("div")[1];
+            div1.style = "background-color: black";
+            div2.style = "background-color: red";
+        }
+
+        var resetBtn = document.getElementById("reset-btn");
+        resetBtn.onclick = function(){
+            var div1 = document.getElementsByTagName("div")[0];
+            var div2 = document.getElementsByTagName("div")[1];
+            div1.style = "";
+            div2.style = "";
+        }
+    </script>
+</body>
+</html>
